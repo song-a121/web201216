@@ -38,7 +38,9 @@ img{display:block; border: none; }
 #gnb .d2 a{ font-size: 0.8em; line-height: 1.8;
             background-color: black; color: white;
             }
-#gnb .d2{ left:0; top: calc(100% + 15px); padding: 10px 15px; width: 100px;}
+#gnb .d2{ display: none;
+  left:0; top: calc(100% + 15px); padding: 10px 15px; width: 100px;}
+#gnb>li:hover .d2{ display: block; }
 
 #gnb li:nth-child(1) .d2{ left: 24px; }
 #gnb li:nth-child(4) .d2{ width: 100px; }
