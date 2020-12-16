@@ -1,55 +1,59 @@
 /* reset */
-*{margin:0; padding:0;}
+*{margin:0; padding:0}
 body{ background-color: #ffffff; }
-body, ul, li, div, section, ol, dl, dt, dd, p, h1, h2, h3, h4, h5, h6, header, footer{
+body, div, section,
+ul, li, dl, dt, dd, ol,
+h1, h2, h3, h4, h5, h6, p,
+header, footer{
   margin:0; padding:0;
-  font-family: '맑은 고딕';
+  font-family:'맑은 고딕';
   font-size: 16px;
-  color: #666666;
   line-height: 2;
-  letter-spacing: -1.4px;
-}
-ul, li, dl, dt, dd, ol{list-style:none;}
-a{text-decoration:none; color:#666666; }
-a:hover{color: #009688;}
-img{display:block; border: none; }
-/* 보조 칼라 #6a6a6a */
+  color:#333333;
+  letter-spacing: -1.6px;
+  }
+ul, li, dl, dt, dd, ol { list-style: none;}
+a{ text-decoration: none;
+   color: #333333;}
+   a:hover{ color: #0066ad; }
+img{ display: block;
+     border: none; }
+/* 보조칼라 #30a3f3 */
 
 
 /* common */
-.container{ width: 1200px; margin: 0 auto; } /* 가운데 정렬 */
-.clear:after{ content:""; display: block; clear: both; } /* float정리를 위한 class */
+.container{ width: 1200px; margin:0 auto; }
+.clear:after{ content:""; display: block; clear: both; }
 .rel{ position: relative; }
 .abs{ position: absolute; }
 .fix{ position: fixed; }
-.fl{ float: left; }
-.fr{ float: right; }
 .disB{ display: block; }
 .disN{ display: none; }
-.disIB{ display: inline-block; }
+.disI{ display: inline-block; }
+.fl{ float: left; }
+.fr{ float: right; }
 
-/* inspector 검수용, 검수용 스타일은 아주 구체적으로 잡아주고 !mportant를 꼭 넣어준다! */
 .red{ border-bottom: 1px solid red !important; }
 
-/* inline태그 공백 정리해야 되니까! 꼭 block처리!! */
-#hd a, #hd img{ display: block; }
-#gnb .d1{ font-weight: bold; font-size: 20px; line-height: 46px;
-          margin-left: 2em; background-color: yellow}
-#gnb .d2 a{ font-size: 0.8em; line-height: 1.8;
-            background-color: black; color: white;
+#gnb .d1{ font-size: 18px; font-weight: bold;
+          line-height: 50px; padding-left: 40px;
+          margin-bottom: 15px; }
+#gnb .d2{ background-color: black; display: none;
+          left: 0; top: 100%; width: 100px;
+          padding: 10px 15px;
+          }
+#gnb .d2 a{ font-size: 12px; line-height: 2.4;
+            color: white;
             }
-#gnb .d2{ display: none;
-  left:0; top: calc(100% + 15px); padding: 10px 15px; width: 100px;}
-#gnb>li:hover .d2{ display: block; }
 
-#gnb li:nth-child(1) .d2{ left: 24px; }
-#gnb li:nth-child(4) .d2{ width: 100px; }
-
-
-header#hd{ padding: 15px 0; }
+#gnb li:nth-child(1) .d2{ left: 28px;}
+#gnb li:nth-child(2) .d2{ left: 28px;}
+#gnb li:nth-child(3) .d2{ left: 32px;}
+#gnb li:nth-child(4) .d2{ left: 30px; width: 60px;}
+#gnb li:hover .d2{ display: block; }
 
 
+#gnb a, #gnb img{ display: block; }
 
 
-section#main{  }
-footer#fd{  }
+header#hd{ padding: 15px 15px 0 15px; }
