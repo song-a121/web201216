@@ -40,9 +40,11 @@ img{ display: block;
           line-height: 50px; padding-left: 40px;
           padding-bottom: 15px;
           background: yellow; }
-#gnb .d2{ background-color: black; display: none;
-          left: 0; top: calc(100% + 15px); width: 100px;
-          padding: 10px 15px;
+#gnb .d2{ background-color: black;
+          height: 0px; width: 100px;
+          left: 0; top: calc(100% + 15px);
+          padding: 0 15px;
+          overflow:hidden; transition: 0.5s;
           }
 #gnb .d2 a{ font-size: 12px; line-height: 2.4;
             color: white;
@@ -52,7 +54,7 @@ img{ display: block;
 #gnb li:nth-child(2) .d2{ left: 28px;}
 #gnb li:nth-child(3) .d2{ left: 32px;}
 #gnb li:nth-child(4) .d2{ left: 30px; width: 60px;}
-#gnb li:hover .d2{ display: block; }
+#gnb li:hover .d2{ display: block; height: 100px; }
 
 
 #gnb a, #gnb img{ display: block; }
