@@ -35,11 +35,13 @@ img{ display: block;
 
 .red{ border-bottom: 1px solid red !important; }
 
+#gnb>li{background:blue; height: 50px; }
 #gnb .d1{ font-size: 18px; font-weight: bold;
           line-height: 50px; padding-left: 40px;
-          margin-bottom: 15px; }
+          padding-bottom: 15px;
+          background: yellow; }
 #gnb .d2{ background-color: black; display: none;
-          left: 0; top: 100%; width: 100px;
+          left: 0; top: calc(100% + 15px); width: 100px;
           padding: 10px 15px;
           }
 #gnb .d2 a{ font-size: 12px; line-height: 2.4;
@@ -56,4 +58,4 @@ img{ display: block;
 #gnb a, #gnb img{ display: block; }
 
 
-header#hd{ padding: 15px 15px 0 15px; }
+header#hd{ padding: 15px 0; }
