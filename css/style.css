@@ -15,11 +15,12 @@ header, footer{
 ul, li, dl, dt, dd, ol { list-style: none;}
 a{ text-decoration: none;
    color: #333333;}
-   a:hover{ color: #0066ad; }
+a:hover{ color: #0066ad; }
 img{ display: block;
      border: none; }
 /* 보조칼라 #30a3f3 */
 
+/* display / @keyframes / 값이 auto - 애니메이션 불가 */
 
 /* common */
 .container{ width: 1200px; margin:0 auto; }
@@ -35,26 +36,32 @@ img{ display: block;
 
 .red{ border-bottom: 1px solid red !important; }
 
-#gnb>li{background:blue; height: 50px; }
+#gnb>li{ height: 50px; }
 #gnb .d1{ font-size: 18px; font-weight: bold;
           line-height: 50px; padding-left: 40px;
           padding-bottom: 15px;
-          background: yellow; }
-#gnb .d2{ background-color: black;
-          height: 0px; width: 100px;
+          /* background: yellow;  */
+        }
+#gnb .d2{ height: 0px; width: 100px;
           left: 0; top: calc(100% + 15px);
           padding: 0 15px;
           overflow:hidden; transition: 0.5s;
+          background-color: black;
           }
 #gnb .d2 a{ font-size: 12px; line-height: 2.4;
             color: white;
             }
 
 #gnb li:nth-child(1) .d2{ left: 28px;}
-#gnb li:nth-child(2) .d2{ left: 28px;}
-#gnb li:nth-child(3) .d2{ left: 32px;}
 #gnb li:nth-child(4) .d2{ left: 30px; width: 60px;}
-#gnb li:hover .d2{ display: block; height: 100px; }
+#gnb .d2:before{ content:""; display: block; height: 10px;}
+
+/* 마우스가 올라간 대메뉴 li 속 소메뉴 .d2의 높이가 100이 되라  */
+#gnb > li:hover .d2{ height: 110px; }
+
+/* 마우스가 올라간 대메뉴 li 속 대메뉴 a의 색상처리 */
+#gnb li:hover .d1{ color: #0066ad; }
+
 
 
 #gnb a, #gnb img{ display: block; }
